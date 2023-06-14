@@ -8,6 +8,13 @@ let myleads = [];
 // myleads.push("senai")
 // console.log(myleads)
 let listitem= ""
+let leadfromlocalstorage= JSON.parse(localStorage.getItem("myleads"))
+
+
+if(leadfromlocalstorage){
+  myleads=leadfromlocalstorage
+  renderlead()
+}
 button.addEventListener("click", function() {
   myleads.push(input.value);
   
@@ -16,11 +23,9 @@ button.addEventListener("click", function() {
   localStorage.setItem("myleads", JSON.stringify(myleads))
   renderlead()
 });
-let leadfromlocalstorage= JSON.parse(localStorage.getItem("myleads"))
-console.log(leadfromlocalstorage)
 function renderlead(){
-    for (let i = 0; i < leadfromlocalstorage.length; i++) {
-        listitem += `<li> <a target="_blank "href=${leadfromlocalstorage[i]}>` + leadfromlocalstorage[i] +"</a></li>";
+    for (let i = 0; i < myleads.length; i++) {
+        listitem += `<li> <a target="_blank "href=${myleads[i]}>` + myleads[i] +"</a></li>";
       
       }
       ul.innerHTML= listitem
