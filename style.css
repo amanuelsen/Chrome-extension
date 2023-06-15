@@ -11,17 +11,13 @@ body{
     margin: 10px;
 }
 button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: rgb(47, 126, 47);
     font-weight: bold;
-    height: 40px;
-    border: none;
-    padding: 10px;
-    margin-top: 5px;
+    padding: 10px 20px;
     color: white;
     cursor: pointer;
+    border: 1px solid rgb(47, 126, 47);
+
 }
 input{
     box-sizing: border-box;
@@ -29,6 +25,9 @@ input{
     border: 1px solid rgb(47, 126, 47);;
     text-decoration: none;
     padding:10px ;
+}
+input:focus{
+   outline: none;
 }
 ul{
     margin: 10px;
@@ -45,4 +44,10 @@ ul li{
 }
 li a{
     color:rgb(47, 126, 47);
+    font-weight: bold;
+}
+#delete{
+    color: green;
+    background-color: white;
+
 }

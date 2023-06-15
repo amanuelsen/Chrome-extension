@@ -1,0 +1,12 @@
+{
+    "manifest_veriosn":3,
+    "verion":"1.0",
+    "name":"Leads trcker",
+    "action":{
+        "default_popup":"index.html",
+        "default_icon":"icon.png"
+    },
+    "permissions":[
+        "tabs"
+    ]
+}
